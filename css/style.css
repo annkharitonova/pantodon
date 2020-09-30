@@ -1,0 +1,393 @@
+@charset "UTF-8";
+/* Styles Reset */
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/* Project Fonts */
+@font-face {
+  font-family: "PlainScriptCTT";
+  src: url("../fonts/plainscriptctt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Variables */
+/* General Styles */
+:root {
+  font-size: 16px;
+}
+
+body {
+  min-width: 320px;
+  font-family: "PlainScriptCTT", arial;
+  line-height: 1.2;
+}
+
+.look-info {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+  padding: 35px 0 0;
+}
+
+.article {
+  margin-bottom: 30px;
+}
+
+.text-orange {
+  color: #ba6527;
+}
+
+.look-image {
+  margin: 0 auto;
+}
+
+.look__img {
+  display: block;
+  width: 405px;
+  height: 219px;
+  border: 5px solid #3b3b3b;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.look__img--borderless {
+  display: block;
+  width: 490px;
+  height: 440px;
+  border: none;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+/* Containers */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 30px;
+}
+
+/* Import Main Styles */
+/* Header Styles Start */
+.header {
+  background: url("../img/header-bg.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0 18px;
+}
+.header__logo {
+  max-width: 193px;
+}
+.header__menu {
+  display: flex;
+  padding-right: 80px;
+}
+.header__item {
+  margin-left: 35px;
+}
+.header__link {
+  opacity: 0.7;
+  color: #dcdcdc;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.header__link:hover {
+  color: #e5ba59;
+}
+.header__text {
+  margin-bottom: 20px;
+}
+.header__img {
+  max-width: 43px;
+}
+.header__break {
+  height: 3px;
+  background-color: #dbd4d5;
+}
+
+/* Header Styles End */
+/* Intro Styles Start */
+.intro__body {
+  position: relative;
+}
+
+.slider__pic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slider__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider__caption {
+  max-width: 600px;
+  position: absolute;
+  top: 41%;
+  left: 10%;
+  z-index: 10;
+  font-size: 85px;
+  text-transform: uppercase;
+  font-family: "Rubik Mono One", sans-serif;
+  color: #fff;
+}
+
+.slider-button {
+  position: absolute;
+  top: 45%;
+  cursor: pointer;
+}
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
+
+.slider .slick-list {
+  overflow: hidden;
+}
+
+.slider .slick-track {
+  display: flex;
+}
+
+/* Intro Styles End */
+/* Gallery Styles Start */
+.gallery__body {
+  position: relative;
+  padding: 61px 0 27px;
+}
+.gallery__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 11px;
+}
+.gallery__row a {
+  flex: 0 1 33.333%;
+  padding: 0 15px;
+  position: relative;
+  padding: 0 0 24% 0;
+  margin: 0 12px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.gallery__row a:hover {
+  opacity: 0.9;
+}
+.gallery__row a:hover .gallery__magnify {
+  opacity: 0.5;
+}
+.gallery__row a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 5px solid #3b3b3b;
+}
+.gallery__row a img + .gallery__magnify {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.gallery__btn {
+  width: 172px;
+  text-align: center;
+  background: #e4b959;
+  padding-top: 4px;
+  border-radius: 20px;
+  margin-left: auto;
+  transition: all 0.5s ease;
+}
+.gallery__link {
+  color: #393939;
+  font-size: 24px;
+  font-weight: 700;
+}
+.gallery__btn:hover {
+  background: #e2e2e2;
+}
+
+/* Gallery Styles Start */
+/* Fact Styles Start */
+.facts__body {
+  padding: 30px 0;
+}
+.facts__title {
+  display: block;
+  color: #ba6527;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 30px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #999999;
+  margin-bottom: 21px;
+}
+.facts__card {
+  display: flex;
+}
+.facts__pic {
+  margin-right: 12px;
+}
+.facts__img {
+  max-width: 250px;
+  border: 3px solid #3b3b3b;
+}
+.facts__info p {
+  color: #626262;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.facts__btn {
+  width: 70px;
+  height: 23px;
+  text-align: center;
+  background: #e2e2e2;
+  padding-top: 2px;
+  border-radius: 20px;
+  margin-left: auto;
+  transition: all 0.5s ease;
+}
+.facts__link {
+  color: #ba6527;
+  font-size: 18px;
+  font-weight: 700;
+}
+.facts__btn:hover {
+  background: #e5ba59;
+}
+
+/* Fact Styles End */
+/* Footer Styles Start */
+.footer {
+  background: url(../img/footer-bg.jpg) 50% 0 no-repeat;
+  background-size: cover;
+}
+.footer__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 0 30px;
+  height: 540px;
+}
+.footer__body span {
+  align-self: flex-end;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #a0a0a0;
+}
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+  max-width: 810px;
+  margin-bottom: 260px;
+}
+.footer__subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #898989;
+  margin-bottom: 15px;
+}
+
+.section__link {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #898989;
+  transition: all 0.5s ease;
+}
+.section__link:hover {
+  color: #e5ba59;
+}
+
+/* Footer Styles End */
